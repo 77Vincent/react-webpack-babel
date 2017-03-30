@@ -18,11 +18,19 @@ export default class App extends React.Component {
 
   componentDidMount() {
     new Toggling({
+      trigger: 'html',
+      target: '.target',
+      excluded: '.trigger',
+      handler(tar, tri) {
+        this.show(tar);
+      }
+    });
+
+    new Toggling({
       trigger: '.trigger',
       target: '.target',
       handler(tar, tri) {
         this.toggle(tar);
-        this.toggleClass(tri, 'toggle');
       }
     })
   }
