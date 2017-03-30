@@ -1,3 +1,13 @@
 body {
 	background: #ece7e7;
 }
+
+.trigger {
+  background-color: red;
+  border-radius: 5px;
+  padding: 5px 20px;
+
+  &.toggle {
+    background-color: yellow;
+  }
+}
